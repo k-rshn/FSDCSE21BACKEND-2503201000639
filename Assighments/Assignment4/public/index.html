@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Campus Help Desk</h1>
+        
+        <div class="form-section">
+            <h2>Submit a Request</h2>
+            <form id="requestForm">
+                <input type="hidden" id="requestId">
+                
+                <div class="form-group">
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="IT Support">IT Support</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Academic">Academic</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="problemDescription">Problem Description:</label>
+                    <textarea id="problemDescription" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" required>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submitBtn">Submit Request</button>
+                <button type="button" id="cancelBtn" style="display:none;">Cancel Edit</button>
+            </form>
+        </div>
+
+        <div class="requests-section">
+            <h2>Submitted Requests</h2>
+            <div id="requestsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
